@@ -9,7 +9,7 @@ root = pathlib.Path(__file__).parent
 
 url = "https://furlscrochet.com/collections/current-odyssey-collection"
 
-r = requests.get(url,verify=False)
+r = requests.get(url)
 soup = bs4.BeautifulSoup(r.text,"html.parser")
 
 product_tags = soup.find("ul", attrs={"id": "main-collection-product-grid"})
